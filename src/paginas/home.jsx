@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa'; // import de bibliotecas de icones do react-icons
 
-function PegandoDados() {
+function DadosAPI() {
   const [dados, setDados] = useState([]);
 
   const options = {
@@ -12,31 +12,33 @@ function PegandoDados() {
     }
   };
 
-  const fetchData = async () => {
+  const buscarFilmes = async () => {
     try {
-      const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=f28de8ba0645f2c84397c77d12304763', options);
-      const data = await response.json();
-      setDados(data.results);
+      const response = await fetch('https://api.themoviedb.org/3/movie/popular?language=pt-BR&?api_key=f28de8ba0645f2c84397c77d12304763', options);
+      const dadosJson = await response.json();
+      setDados(dadosJson.results);
     } catch (error) {
-      console.error('Erro ao buscar dados da API:', error);
+      alert('Erro ao buscar Dados da API');
+      console.error('Erro ao buscar Dados da API:', error);
     }
   };
 
-  const maisAvaliados = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f28de8ba0645f2c84397c77d12304763';
+  // const maisAvaliados = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f28de8ba0645f2c84397c77d12304763';
   // console.log(maisAvaliados);
 
-  fetchData(maisAvaliados);
+  // buscarFilmes(maisAvaliados);
 
-  useEffect(() => { fetchData(); }, []);
+  useEffect(() => {
+    buscarFilmes();
+  }, []);
 
   return (
     <div className='containerFilmes'>
-      <h2 className='titulo'>Filmes Top Rated: </h2>
+      <h2 className='titulo'>EM CARTAZ:</h2>
       <div className="infoFilme">
-        {dados.length > 0 && dados.map((movie) =>
+        {dados.map((movie) =>
           <div key={movie.id} className="filme">
-            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt
-            />
+            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Cartaz do filme ${movie.title}`}/>
             <h3>{movie.title}</h3>
             <p><FaStar />{movie.vote_average}</p>
           </div>
@@ -44,7 +46,7 @@ function PegandoDados() {
       </div>
     </div>)
 }
-export default PegandoDados;
+export default DadosAPI;
 
 
 // function Home() {
