@@ -1,0 +1,24 @@
+nav a {
+    text-decoration: none;
+    color: #ffffff; 
+    transition: ease 0.2s;
+}
+
+nav a:hover {
+    color: #fbff00; 
+    text-shadow: 0 0 5px #818a02a4, 0 0 10px #818a02a4, 0 0 1px #818a02a4, 0 0 2px #818a02a4, 0 0 30px #818a0256, 0 0 40px #818a0256, 0 0 55px #818a0256, 0 0 75px #818a0256;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    /* padding: 1rem 2rem; */
+}
+
+nav h2 a {
+    display: flex;
+    align-items: center;
+}
+

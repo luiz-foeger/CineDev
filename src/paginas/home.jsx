@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa'; // import de bibliotecas de icones do react-icons
+import { Link } from 'react-router-dom';
+// import '../components/CardFilme/CardFilme.module.css'
 
 function DadosAPI() {
   const [dados, setDados] = useState([]);
@@ -33,18 +35,22 @@ function DadosAPI() {
   }, []);
 
   return (
-    <div className='containerFilmes'>
+    <>
       <h2 className='titulo'>EM CARTAZ:</h2>
-      <div className="infoFilme">
+    <div className='containerFilmes'>
+      <div className="cardFilme">
         {dados.map((movie) =>
           <div key={movie.id} className="filme">
             <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Cartaz do filme ${movie.title}`}/>
             <h3>{movie.title}</h3>
             <p><FaStar />{movie.vote_average}</p>
+            <Link id='btnDetalhes'>Detalhes</Link>
           </div>
         )}
       </div>
-    </div>)
+    </div>
+    </>
+    )
 }
 export default DadosAPI;
 
