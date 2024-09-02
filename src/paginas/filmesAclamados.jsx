@@ -1,8 +1,11 @@
-function Search() {
-    return (
-        <>
-        </>
-    );
-  }
+import FilmesAclamados from "../components/FilmesAclamados/Aclamados";
 
-export default Search;
+function SecondPage() {
+  return (
+    <>
+      <FilmesAclamados />
+    </>
+  );
+}
+
+export default SecondPage;

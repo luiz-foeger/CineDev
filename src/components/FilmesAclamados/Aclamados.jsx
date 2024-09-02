@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa'; // import de bibliotecas de icones do react-icons
 import { Link } from 'react-router-dom';
-import estilos from './Populares.module.css'
+import estilos from './Aclamados.module.css'
 
-function FilmesPopulares() {
+function FilmesAclamados() {
     const [dados, setDados] = useState([]);
 
     const options = {
@@ -16,7 +16,7 @@ function FilmesPopulares() {
 
     const buscarFilmes = async () => {
         try {
-            const response = await fetch('https://api.themoviedb.org/3/movie/popular?language=pt-BR&?api_key=f28de8ba0645f2c84397c77d12304763', options);
+            const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=pt-BR&?api_key=f28de8ba0645f2c84397c77d12304763', options);
             const dadosJson = await response.json();
             setDados(dadosJson.results);
         } catch (error) {
@@ -25,13 +25,19 @@ function FilmesPopulares() {
         }
     };
 
+
+        // const maisAvaliados = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f28de8ba0645f2c84397c77d12304763';
+    // console.log(maisAvaliados);
+
+    // buscarFilmes(maisAvaliados);
+
     useEffect(() => {
         buscarFilmes();
     }, []);
 
     return (
         <>
-            <h2 className={estilos.titulo}>EM CARTAZ:</h2>
+            <h2 className={estilos.titulo}>BEM AVALIADOS:</h2>
             <div className={estilos.containerFilmes}>
                 <div className={estilos.filme}>
                     {dados.map((movie) =>
@@ -48,4 +54,4 @@ function FilmesPopulares() {
     )
 }
 
-export default FilmesPopulares;
+export default FilmesAclamados;

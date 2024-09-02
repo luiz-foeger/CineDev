@@ -4,10 +4,12 @@ import Home from './paginas/home';
 import Filme from './paginas/filme';
 import Search from './paginas/filmesAclamados';
 import NavRoute from './components/Nav/Nav';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <NavRoute />
       <Routes>
         <Route element={<App />} />
