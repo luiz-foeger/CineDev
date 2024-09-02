@@ -1,14 +1,22 @@
 import './App.css';
-import CardFilme from './components/CardFilme/CardFilme';
-import NavRoute from './components/Nav/Nav';
+import { Route, Routes } from 'react-router-dom';
+import Home from './paginas/home';
+import Filme from './paginas/filme';
+import Search from './paginas/search';
 
 function App() {
   return (
     <div className="App">
-      <NavRoute />
-      {/* <CardFilme movie={movie}/> */}
+            <Routes>
+                <Route element={<App />} />
+                <Route path='/' element={<Home />} />
+                <Route path='/filme/:id' element={<Filme />} />
+                <Route path='search' element={<Search />} />
+            </Routes>
     </div>
   );
 }
 
 export default App;
+
+
