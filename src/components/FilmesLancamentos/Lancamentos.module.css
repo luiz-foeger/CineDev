@@ -43,10 +43,12 @@
     margin: 20px 10px;
     border-radius: 10px;
     transition: ease 0.2s;
+    /* border: solid 5px #0e0e0ece; */
 }
 
 .containerFilmes div.cardFilme:hover {
     scale: 1.02;
+    /* border: solid 5px rgb(105, 105, 105); */
 }
 
 /* ---------- */

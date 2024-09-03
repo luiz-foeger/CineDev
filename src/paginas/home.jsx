@@ -1,11 +1,10 @@
-import FilmesAclamados from "../components/FilmesAclamados/Aclamados";
 import FilmesPopulares from "../components/FilmesPopulares/Populares";
+import FilmesLancamentos from "../components/FilmesLancamentos/Lancamentos";
 
 function Home() {
   return (
     <>
-      <FilmesPopulares />
-      <FilmesAclamados />
+      <FilmesLancamentos />
     </>
   );
 }

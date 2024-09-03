@@ -6,9 +6,9 @@ function NavRoute() {
         <nav className={estilos.nav}>
             <div>
                 <h3>
+                    <Link to="/filmesAclamados">Mais Populares </Link>
                     <Link to="/">Lançamentos</Link>
-                    <Link to="/">Mais Populares </Link>
-                    <Link to="/">Mais Aclamados</Link>
+                    <Link to="/">Recomendados</Link>
                 </h3>
             </div>
 
