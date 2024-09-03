@@ -1,15 +1,11 @@
-import { Link } from 'react-router-dom';
-// import { BiCameraMovie, BiSearchAlt2 } from 'react-icons/bi'; import de bibliotecas de icones do react-icons
-// import { useNavigate } from 'react-router-dom';
-import './Header.module.css';
+import estilos from './Header.module.css';
+import logo from '../../img/CineDev.png'
 
 function Header() {
     return (
-        <nav id="nav">
-            <div>
-                <img src='' alt="Logo do Projeto" />
-            </div>
-        </nav>
+        <header className={estilos.header}>
+                <img className={estilos.logo} src={logo} alt="Logo do Projeto" />
+        </header>
     );
 }
 

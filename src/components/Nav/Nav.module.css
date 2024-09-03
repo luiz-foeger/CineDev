@@ -1,19 +1,18 @@
-nav {
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     color: #e4e4e4;
-    margin: 0 55px;
-    font-size: 20px;
+    margin: 0 40px;
     transition: ease 0.2s;
 }
 
-nav a:hover {
+.nav a:hover {
     color: #ffffff;
     text-shadow: 0 0 5px #979797a4, 0 0 10px #979797a4, 0 0 1px #979797a4, 0 0 2px #979797a4, 0 0 30px #979797a4, 0 0 40px #979797a4, 0 0 55px #979797a4, 0 0 75px #979797a4;
 }
