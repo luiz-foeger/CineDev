@@ -5,6 +5,7 @@ import Filme from './paginas/filme';
 import Search from './paginas/filmesAclamados';
 import NavRoute from './components/Nav/Nav';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/filme/:id' element={<Filme />} />
         <Route path='search' element={<Search />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
