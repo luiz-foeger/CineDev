@@ -14,13 +14,19 @@
 }
 
 .containerFilmes h3 {
-    font-size: 20px;
+    font-size: 21px;
     max-width: 350px;
 }
 
 .containerFilmes p {
     margin-top: 3px;
     margin-bottom: 14px;
+    font-size: 17px;
+}
+
+.containerFilmes svg {
+    color: #fbff00e0;
+    margin-right: 5px;
 }
 
 .containerFilmes .btnDetalhes {
@@ -38,15 +44,18 @@
 }
 
 .containerFilmes div.cardFilme {
-    background-color: #0e0e0ece;
+    /* background-color: #0e0e0ece; */
     padding: 22px 19px;
     margin: 20px 10px;
     border-radius: 10px;
     transition: ease 0.2s;
+    /* border: solid 2px #0e0e0ece; */
 }
 
 .containerFilmes div.cardFilme:hover {
+        background-color: #2d2b2b;
     scale: 1.02;
+    /* border: solid 2px rgb(105, 105, 105); */
 }
 
 /* ---------- */

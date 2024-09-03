@@ -16,3 +16,24 @@
     color: #ffffff;
     text-shadow: 0 0 5px #979797a4, 0 0 10px #979797a4, 0 0 1px #979797a4, 0 0 2px #979797a4, 0 0 30px #979797a4, 0 0 40px #979797a4, 0 0 55px #979797a4, 0 0 75px #979797a4;
 }
+
+/* ---------- */
+
+@media screen and (max-width: 650px) {
+    .nav a {
+        margin: 18px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .nav a {
+        font-size: 17px;
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .nav a {
+        font-size: 25px;
+    }
+}
