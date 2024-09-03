@@ -1,6 +1,6 @@
 import FilmesPopulares from "../components/FilmesPopulares/Populares";
 
-function SecondPage() {
+function PaginaPopulares() {
   return (
     <>
       <FilmesPopulares />
@@ -8,4 +8,4 @@ function SecondPage() {
   );
 }
 
-export default SecondPage;
+export default PaginaPopulares;
