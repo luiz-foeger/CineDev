@@ -1,5 +1,5 @@
 import estilos from './Header.module.css';
-import logo from '../../img/CineDev.png'
+import logo from '../../img/logo-2.png'
 
 function Header() {
     return (

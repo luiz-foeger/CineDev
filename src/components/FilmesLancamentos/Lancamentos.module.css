@@ -69,8 +69,64 @@
 }
 
 .filme img {
+    height: auto;
     width: 350px;
     margin-bottom: 9px;
 }
 
-/* O QUE FAZER: PAGINA DE TOP FILMES / HEADER */
+/* ---------- */
+
+@media screen and (max-width: 460px) {
+    .filme img {
+        width: 140px;
+        margin: 0;
+    }
+
+    .containerFilmes h3 {
+        font-size: 18px;
+        max-width: 350px;
+    }
+    
+    .containerFilmes p {
+        margin-top: 3px;
+        font-size: 17px;
+        margin-bottom: 140px;
+    }
+    
+    .containerFilmes svg {
+        color: #fbff00e0;
+    }
+    
+    .containerFilmes div.cardFilme {
+        display: flex;
+        flex-direction: row;
+        padding: 15px 15px;
+        width: 385px;
+        margin: 0;
+    }
+
+    .cardFilme div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .filme img {
+        width: 140px;
+        margin: 0;
+    }
+
+    .containerFilmes div.cardFilme {
+        display: flex;
+        flex-direction: row;
+        width: 370px;
+        margin: 0;
+    }
+
+    .containerFilmes p {
+        margin-bottom: 120px;
+    }
+    
+}

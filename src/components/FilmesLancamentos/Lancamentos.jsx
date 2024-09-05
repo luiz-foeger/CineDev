@@ -29,6 +29,8 @@ function FilmesLancamentos() {
         buscarFilmes();
     }, []);
 
+
+
     return (
         <>
             <h2 className={estilos.titulo}>EM CARTAZ:</h2>
@@ -37,9 +39,11 @@ function FilmesLancamentos() {
                     {dados.map((movie) =>
                         <div key={movie.id} className={estilos.cardFilme}>
                             <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Cartaz do filme ${movie.title}`} />
+                            <div>
                             <h3>{movie.title}</h3>
-                            <p><FaStar />{movie.vote_average}</p>
-                            <Link className={estilos.btnDetalhes} id='btnDetalhes'>Detalhes</Link>
+                                <p><FaStar />{movie.vote_average}</p>
+                                <Link className={estilos.btnDetalhes} id='btnDetalhes'>Detalhes</Link>
+                            </div>
                         </div>
                     )}
                 </div>
