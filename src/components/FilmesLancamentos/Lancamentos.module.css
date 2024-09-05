@@ -4,7 +4,9 @@
     margin-top: 50px;
 }
 
+
 /* ---------- */
+
 
 .containerFilmes {
     display: flex;
@@ -53,12 +55,14 @@
 }
 
 .containerFilmes div.cardFilme:hover {
-        background-color: #2d2b2b;
+    background-color: #2d2b2b;
     scale: 1.02;
     /* border: solid 2px rgb(105, 105, 105); */
 }
 
+
 /* ---------- */
+
 
 .filme {
     display: flex;
@@ -74,9 +78,55 @@
     margin-bottom: 9px;
 }
 
+
 /* ---------- */
 
+
+@media screen and (max-width: 1500px) {
+    .containerFilmes div.cardFilme {
+        margin: 25px 10px;
+    }
+
+    .titulo {
+        font-size: 25px;
+    }
+
+    .filme img {
+        width: 280px;
+        margin: 0;
+        margin-bottom: 7px;
+    }
+
+    .containerFilmes h3 {
+        font-size: 17px;
+        max-width: 280px;
+    }
+
+    .containerFilmes p {
+        margin-top: 5px;
+        margin-bottom: 14px;
+        font-size: 15px;
+    }
+
+    .containerFilmes .btnDetalhes {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 675px) {
+    .containerFilmes div.cardFilme {
+        background-color: #2d2b2b;
+    }
+}
+
+
 @media screen and (max-width: 460px) {
+    .titulo {
+        font-size: 20px;
+        margin: 20px 0px;
+    }
+
     .filme img {
         width: 140px;
         margin: 0;
@@ -86,31 +136,34 @@
         font-size: 18px;
         max-width: 350px;
     }
-    
+
     .containerFilmes p {
         margin-top: 3px;
         font-size: 17px;
         margin-bottom: 140px;
     }
-    
+
     .containerFilmes svg {
         color: #fbff00e0;
     }
-    
+
     .containerFilmes div.cardFilme {
         display: flex;
         flex-direction: row;
         padding: 15px 15px;
         width: 385px;
-        margin: 0;
+        margin: 15px 0px;
+        background-color: #2d2b2b;
     }
 
     .cardFilme div {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         margin-left: 12px;
     }
 }
+
 
 @media screen and (max-width: 410px) {
     .filme img {
@@ -122,11 +175,10 @@
         display: flex;
         flex-direction: row;
         width: 370px;
-        margin: 0;
     }
 
     .containerFilmes p {
         margin-bottom: 120px;
     }
-    
+
 }

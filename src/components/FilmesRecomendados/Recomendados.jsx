@@ -26,7 +26,7 @@ function FilmesRecomendados() {
     };
 
 
-        // const maisAvaliados = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f28de8ba0645f2c84397c77d12304763';
+    // const maisAvaliados = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f28de8ba0645f2c84397c77d12304763';
     // console.log(maisAvaliados);
 
     // buscarFilmes(maisAvaliados);
@@ -43,9 +43,11 @@ function FilmesRecomendados() {
                     {dados.map((movie) =>
                         <div key={movie.id} className={estilos.cardFilme}>
                             <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Cartaz do filme ${movie.title}`} />
-                            <h3>{movie.title}</h3>
-                            <p><FaStar />{movie.vote_average}</p>
-                            <Link className={estilos.btnDetalhes} id='btnDetalhes'>Detalhes</Link>
+                            <div>
+                                <h3>{movie.title}</h3>
+                                <p><FaStar />{movie.vote_average}</p>
+                                <Link className={estilos.btnDetalhes} id='btnDetalhes'>Detalhes</Link>
+                            </div>
                         </div>
                     )}
                 </div>

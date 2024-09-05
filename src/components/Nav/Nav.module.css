@@ -19,21 +19,36 @@
 
 /* ---------- */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 670px) {
     .nav a {
         margin: 18px;
     }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 540px) {
     .nav a {
         font-size: 17px;
         margin: 15px;
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
     .nav a {
-        font-size: 25px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .nav a {
+        font-size: 13px;
+        margin: 9px;
+
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .nav a {
+        font-size: 12px;
+        margin: 7px;
     }
 }

@@ -11,3 +11,35 @@
 .logo {
     height: 80%;
 }
+
+/* ---------- */
+
+@media screen and (max-width: 670px) {
+    .logo {
+        height: 75%;
+    }
+    
+    .header {
+        height: 75px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .logo {
+        height: 80%;
+    }
+    
+    .header {
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .logo {
+        height: 90%;
+    }
+
+    .header {
+        height: 50px;
+    }
+}
