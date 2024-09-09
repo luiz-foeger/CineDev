@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { fetchMovieDetails } from '../../services/movieService';
 import { BsGraphUp, BsHourglassSplit, BsWallet2, BsFillFileEarmarkTextFill } from 'react-icons/bs';
-import estilos from './MovieDetails.module.css'
+import estilos from './Detalhes.module.css'
+import { buscarFilmesId } from '../../API/dadosAPI'
+
 
 
 const MovieDetails = ({ id }) => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetchMovieDetails(id).then(setMovie);
+    buscarFilmesId(id).then(setMovie);
   }, [id]);
 
   return (

@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa'; // import de bibliotecas de icones do react-icons
 import { Link } from 'react-router-dom';
 import estilos from './Recomendados.module.css'
-import { leituraAPI, url_api } from '../dadosAPI'
+import { leituraAPI, URL_API } from '../../API/dadosAPI'
 
 function FilmesRecomendados() {
     const [dados, setDados] = useState([]);
-    const consultaAPI = 'trending/movie/week?language=pt-BR&?api_key=f28de8ba0645f2c84397c77d12304763';
+    const consultaAPI = '/trending/movie/week?language=pt-BR&?api_key=f28de8ba0645f2c84397c77d12304763';
 
     const buscarFilmes = async () => {
         try {
-            const response = await fetch(`${url_api}${consultaAPI}`, leituraAPI);
+            const response = await fetch(`${URL_API}${consultaAPI}`, leituraAPI);
             const dadosJson = await response.json();
             setDados(dadosJson.results);
         } catch (error) {

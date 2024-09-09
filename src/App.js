@@ -6,7 +6,7 @@ import NavRoute from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import PaginaRecomendados from './paginas/recomendados';
-import MovieDetailsWrapper  from './paginas/MovieDetailsWrapper';
+import PaginaDetalhes  from './paginas/detalhes';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route path='/populares' element={<PaginaPopulares />} />
         <Route path='/' element={<Home />} />
         <Route path='/recomendados' element={<PaginaRecomendados />} />
-        <Route path="/detalhes/:id" element={<MovieDetailsWrapper  />} />
+        <Route path="/detalhes/:id" element={<PaginaDetalhes  />} />
       </Routes>
       <Footer />
     </div>
