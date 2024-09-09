@@ -38,6 +38,9 @@
     text-decoration: none;
     cursor: pointer;
     transition: ease 0.2s;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 .containerFilmes .btnDetalhes:hover {
