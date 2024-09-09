@@ -16,12 +16,12 @@
 }
 
 .containerFilmes h3 {
-    font-size: 21px;
+    font-size: 20px;
     max-width: 350px;
 }
 
 .containerFilmes p {
-    margin-top: 3px;
+    margin-top: 5px;
     margin-bottom: 14px;
     font-size: 17px;
 }

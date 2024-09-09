@@ -19,9 +19,7 @@ function FilmesPopulares() {
         }
     };
 
-    useEffect(() => {
-        buscarFilmes();
-    }, []);
+    useEffect(() => { buscarFilmes(); }, []);
 
     return (
         <>
@@ -33,7 +31,7 @@ function FilmesPopulares() {
                             <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Cartaz do filme ${movie.title}`} />
                             <div>
                                 <h3>{movie.title}</h3>
-                                <p><FaStar />{movie.vote_average}</p>
+                                <p><FaStar />{movie.vote_average.toFixed(1)}</p>
                                 <Link className={estilos.btnDetalhes} id='btnDetalhes'>Detalhes</Link>
                             </div>
                         </div>
