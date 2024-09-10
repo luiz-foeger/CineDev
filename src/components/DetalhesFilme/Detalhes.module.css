@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martian+Mono:wght@100..800&family=Reddit+Mono:wght@200..900&display=swap');
 
+
+/* ---------- */
+
+
+
 .detalhesFilme {
     color: #fff;
     /* background-color: #333; */
@@ -80,6 +85,96 @@
     height: auto;
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
     mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-    object-fit: cover; /* Ajusta a imagem para não deformar */
+    object-fit: cover;
+    /* Ajusta a imagem para não deformar */
     max-width: 1150px;
+}
+
+
+/* ---------- */
+
+
+
+@media screen and (max-width: 1220px) {
+    .detalhesFilme {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        max-width: 1150px;
+        margin: 50px auto;
+        min-height: 600px;
+    }
+
+    .detalhesFilme img {
+        height: auto;
+        width: 350px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .avaliacaoFilme {
+        display: flex;
+        align-self: center;
+        margin-left: -330px;
+        margin-top: -20px;
+    }
+
+    .detalhesFilme div {
+        margin: 0px 15%;
+    }
+
+    .detalhesFilme p {
+        margin-bottom: 35px;
+        font-family: Inter, sans serif;
+        max-width: 100%;
+    }
+
+    .imgFundo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .detalhesFilme div {
+        margin: 0px 10%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .detalhesFilme img {
+        height: auto;
+        width: 230px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .avaliacaoFilme {
+        display: flex;
+        font-size: 25px;
+        padding: 12px 17px 12px 12px;
+        align-self: center;
+        margin-left: -220px;
+        margin-top: -15px;
+    }
+
+    .detalhesFilme p {
+        margin-bottom: 25px;
+        font-family: Inter, sans serif;
+        max-width: 700px;
+    }
+
+    .detalhesFilme h1 {
+        margin-top: 12px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .detalhesFilme h3 {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    .detalhesFilme svg {
+        font-size: 19px;
+    }
 }

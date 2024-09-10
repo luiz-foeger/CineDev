@@ -157,38 +157,51 @@
 
 
 @media screen and (max-width: 460px) {
-    .titulo {
+    .tituloPagina {
         font-size: 20px;
         margin: 20px 0px;
     }
 
-    .filme img {
-        width: 140px;
+    .containerFilmes h3 {
+        font-size: 18px;
+        max-width: 280px;
+        display: flex;
+        -webkit-line-clamp: 2; /* Limita o texto a 2 linhas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .containerFilmes .cardFilme {
+        height: 230px;
+    }
+
+    .containerFilmes .infoFilme {
+        height: auto;
+        width: 193px;
+    }
+
+    .containerFilmes .infoFilme section {
+        margin-bottom: 5px;
+    }
+
+    .containerFilmes img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
         margin: 0;
     }
 
-    .containerFilmes h3 {
-        font-size: 18px;
-        max-width: 350px;
-    }
-
     .containerFilmes p {
-        margin-top: 3px;
+        margin: 0;
         font-size: 17px;
-        margin-bottom: 140px;
-    }
-
-    .containerFilmes svg {
-        color: #fbff00e0;
     }
 
     .containerFilmes div.cardFilme {
         display: flex;
-        flex-direction: row;
         padding: 15px 15px;
         width: 385px;
         margin: 15px 0px;
-        background-color: #2d2b2b;
     }
 
     .cardFilme div {
@@ -197,23 +210,4 @@
         justify-content: space-between;
         margin-left: 12px;
     }
-}
-
-
-@media screen and (max-width: 410px) {
-    .filme img {
-        width: 140px;
-        margin: 0;
-    }
-
-    .containerFilmes div.cardFilme {
-        display: flex;
-        flex-direction: row;
-        width: 370px;
-    }
-
-    .containerFilmes p {
-        margin-bottom: 120px;
-    }
-
 }
