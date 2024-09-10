@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import MovieDetails from '../components/DetalhesFilme/Detalhes';
+import DetalhesFilme from '../components/DetalhesFilme/Detalhes';
 
 const PaginaDetalhes = () => {
   const { id } = useParams();
-  return <MovieDetails id={id} />;
+  return <DetalhesFilme id={id} />;
 };
 
 export default PaginaDetalhes;
