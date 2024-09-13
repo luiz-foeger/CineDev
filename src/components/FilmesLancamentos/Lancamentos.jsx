@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { FaStar } from 'react-icons/fa'; // import de bibliotecas de icones do react-icons
-import { Link, useNavigate } from 'react-router-dom';
+import { FaStar } from 'react-icons/fa'; // import de icones da biblioteca react-icons
+import { useNavigate } from 'react-router-dom'; 
 import estilos from './Lancamentos.module.css'
 import { leituraAPI, URL_API } from '../../API/dadosAPI'
 
 function FilmesLancamentos() {
     const [dados, setDados] = useState([]);
-    const navigate = useNavigate();
+    const navigate = useNavigate();  // navigate para fazer a navegação para página de detalhes
     const consultaAPI = '/movie/popular?language=pt-BR&?api_key=f28de8ba0645f2c84397c77d12304763';
 
     const buscarFilmes = async () => {
@@ -22,14 +22,14 @@ function FilmesLancamentos() {
 
     useEffect(() => { buscarFilmes(); }, []);
 
-    return (
+    return ( 
         <>
             <h2 className={estilos.tituloPagina}>EM CARTAZ:</h2>
             <div className={estilos.containerFilmes}>
                 <div className={estilos.filmes} >
-                    {dados.map((movie) =>
-                        <div onClick={() => navigate(`/detalhes/${movie.id}`)} key={movie.id} className={estilos.cardFilme}>
-                            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Cartaz do filme ${movie.title}`} />
+                    {dados.map((movie) => 
+                        <div onClick={() => navigate(`/detalhes/${movie.id}`)} key={movie.id} className={estilos.cardFilme}> 
+                            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Cartaz do filme ${movie.title}`} /> 
                             <div className={estilos.infoFilme}>
                                 <h3>{movie.title}</h3>
                                 <section>
