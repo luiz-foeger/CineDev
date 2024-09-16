@@ -1,12 +1,15 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from './paginas/home';
-import PaginaPopulares from './paginas/populares';
+import { Route, Routes } from 'react-router-dom'; // import dos componentes da biblioteca de rotas 
+
+import Header from './components/Header/Header'; // import dos componentes utilizados
 import NavRoute from './components/Nav/Nav';
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+
+import Home from './paginas/home'; // import das páginas utilizadas
+import PaginaPopulares from './paginas/populares';
 import PaginaRecomendados from './paginas/recomendados';
-import PaginaDetalhes  from './paginas/detalhes';
+import PaginaDetalhes from './paginas/detalhes';
+
+import './App.css';
 
 function App() {
   return (
@@ -17,7 +20,7 @@ function App() {
         <Route path='/populares' element={<PaginaPopulares />} />
         <Route path='/' element={<Home />} />
         <Route path='/recomendados' element={<PaginaRecomendados />} />
-        <Route path="/detalhes/:id" element={<PaginaDetalhes  />} />
+        <Route path="/detalhes/:id" element={<PaginaDetalhes />} />
       </Routes>
       <Footer />
     </div>
@@ -25,5 +28,3 @@ function App() {
 }
 
 export default App;
-
-

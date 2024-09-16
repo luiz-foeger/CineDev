@@ -1,26 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { buscarFilmesId } from '../../API/dadosAPI'
-import { BsGraphUp, BsHourglassSplit, BsWallet2 } from 'react-icons/bs';
-import estilos from './Detalhes.module.css'
+import React, { useEffect, useState } from 'react'; // import dos hooks
+import { buscarFilmesId } from '../../API/dadosAPI' // import de requisição API por ID
+import { BsGraphUp, BsHourglassSplit, BsWallet2 } from 'react-icons/bs'; // import de ícones da biblioteca react-icons
 import Loading from '../Loading/Loading';
-// import { MdOutlineAccountBalanceWallet } from 'react-icons/md';
-// import { AiOutlineBarChart } from 'react-icons/ai';
-
+import estilos from './Detalhes.module.css'
 
 const DetalhesFilme = ({ id }) => {
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState(null); // variável de estado 'movie' e função 'setMovie' para atualizá-lo
 
   useEffect(() => {
-    buscarFilmesId(id).then(setMovie);
-  }, [id]);
+    buscarFilmesId(id).then(setMovie); // chama a função e atualiza o estado com o resultado
+  }, [id]); // reexecuta o effect caso 'id' mude
 
-  let valorEmDolares = (valor) => {
+  let valorEmDolares = (valor) => {  // função para transformar o valor inteiro em estilo de moeda dólar
     return valor.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
   };
 
   return (
     <>
-      {movie ? (
+      {movie ? ( // if 'movie' não for nulo
         <div className={estilos.detalhesFilme}>
           <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Cartaz do filme ${movie.title}`} />
           <h2 className={estilos.avaliacaoFilme}>{movie.vote_average.toFixed(1)}</h2>
@@ -44,7 +41,7 @@ const DetalhesFilme = ({ id }) => {
             <p>{movie.runtime} minutos</p>
           </div>
         </div>
-      ) : (
+      ) : ( // if 'movie' for nulo
         <Loading />
       )}
     </>
