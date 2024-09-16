@@ -1,5 +1,5 @@
 export const URL_API = 'https://api.themoviedb.org/3';
-const API_KEY = 'f28de8ba0645f2c84397c77d12304763';
+export const API_KEY = '?api_key=f28de8ba0645f2c84397c77d12304763';
 
 export const leituraAPI  = {
     method: 'GET',
@@ -10,14 +10,18 @@ export const leituraAPI  = {
 };
 
 export const buscarFilmesId = async (id) => {
-  const response = await fetch(`${URL_API}/movie/${id}?api_key=${API_KEY}`);
-  const data = await response.json();
-  return data;
+  const response = await fetch(`${URL_API}/movie/${id}${API_KEY}`);
+  const dadosJson = await response.json();
+  return dadosJson;
 };
 
-
-  // export const fetchMovies = async () => {
-  //   const response = await fetch(`${URL_API}/movie/popular?language=pt-BR&?api_key=${API_KEY}`);
-  //   const data = await response.json();
-  //   return data.results;
-  // };
+// export const buscarFilmes = async () => {
+//   try {
+//       const response = await fetch(`${URL_API}${consultaAPI}${API_KEY}`, leituraAPI);
+//       const dadosJson = await response.json();
+//       setDados(dadosJson.results);
+//   } catch (error) {
+//       alert('Erro ao buscar Dados da API');
+//       console.error('Erro ao buscar Dados da API:', error);
+//   }
+// };
