@@ -7,11 +7,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 <h2>👨‍💻 Comandos</h2>
 
-Inicialização:
-### `npm start`
+Inicialização: [http://localhost:3000](http://localhost:3000)
+
+        npm start
 
 Instalação das biliotecas:
-### `npm install react-router-dom react-icons --save`
+
+        npm install react-router-dom 
+        npm install react-icons --save
+
 
 <h2>💻 Tecnologias Utilizadas</h2>
 <div>
